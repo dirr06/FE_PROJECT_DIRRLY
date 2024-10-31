@@ -16,10 +16,10 @@ function App() {
     <Router>
     <Navbar/>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/booking" element={<Booking/>}/>
-      <Route path="/tickets" element={<Tickets/>}/>
-      <Route path="/flights" element={<Flights/>}/>
+      <Route path="/FE_PROJECT_DIRRLY" element={<Home/>}/>
+      <Route path="/FE_PROJECT_DIRRLY/booking" element={<Booking/>}/>
+      <Route path="/FE_PROJECT_DIRRLY/tickets" element={<Tickets/>}/>
+      <Route path="/FE_PROJECT_DIRRLY/flights" element={<Flights/>}/>
     </Routes>
     </Router>
     </div>
