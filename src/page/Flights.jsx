@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Flights = () => {
   const [flights, setFlights] = useState([]);
-  const [newFlight, setNewFlight] = useState({ from: '', to: '', departure: '', arrival: '', price: '' });
+  const [newFlight, setNewFlight] = useState({ from: '', to: '', departure: '', arrival: '', price: '',imageUrl:'' });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const API_URL = 'http://localhost:5000/flights';
 
@@ -26,7 +26,7 @@ const Flights = () => {
     // Menambahkan penerbangan ke backend
     axios.post(API_URL, newFlight)
       .then(response => {
-        setNewFlight({ from: '', to: '', departure: '', arrival: '', price: '' });
+        setNewFlight({ from: '', to: '', departure: '', arrival: '', price: '', imageUrl:'' });
         setIsModalOpen(false);
         // Update list penerbangan setelah menambahkan data baru
         axios.get(API_URL)
@@ -89,6 +89,13 @@ const Flights = () => {
               placeholder="Masukkan harga"
               value={newFlight.price}
               onChange={(e) => setNewFlight({ ...newFlight, price: e.target.value })}
+            />
+             <input
+              type="text"
+              className="border p-2 rounded w-full mb-4"
+              placeholder="Masukan Gambar"
+              value={newFlight.imageUrl}
+              onChange={(e) => setNewFlight({ ...newFlight, imageUrl: e.target.value })}
             />
             <button
               className="bg-blue-500 text-white p-2 rounded mr-2"
