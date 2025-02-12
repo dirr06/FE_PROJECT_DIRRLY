@@ -42,7 +42,7 @@ Treveloko adalah aplikasi pemesanan tiket dan perjalanan yang dirancang untuk me
 1. **Clone repositori ini:**
 
    ```bash
-   git clone https://github.com/username/treveloko.git
+   git clone https://github.com/dirr06/FE_PROJECT_DIRRLY.git
    cd treveloko
    ```
 
